@@ -5,21 +5,12 @@
 # pass flags to the build command, `snippet` to add a Zephyr snippet, and
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#   - board: nice_nano_v2
-#     shield: corne_left
-#     snippet: studio-rpc-usb-uart
-#     cmake-args: -DCONFIG_ZMK_STUDIO=y
-#     artifact-name: corne_left_with_studio
-#
----
+board: [ "nice_nano" ]
+shield: [ "dactyl_tracer_left", "dactyl_tracer_right" ]
 include:
-  - board: nrf5340dk_nrf5340_cpuapp
-    shield: sofle_left
-  - board: nrf5340dk_nrf5340_cpuapp
-    shield: sofle_right
+  - board: nice_nano
+    shield: dactyl_tracer_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: corne_left_with_studio
+
